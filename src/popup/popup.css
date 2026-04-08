@@ -1,0 +1,161 @@
+:root {
+  --bg: #0b0e14;
+  --card: #121827;
+  --border: rgba(255, 255, 255, 0.08);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.66);
+  --faint: rgba(255, 255, 255, 0.42);
+  --accent: #7dd3fc;
+  --danger: #fca5a5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 320px;
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 13px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.header {
+  padding: 14px 14px 8px;
+}
+
+.brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  background: radial-gradient(120% 120% at 20% 20%, rgba(125, 211, 252, 0.9), rgba(125, 211, 252, 0.12));
+  border: 1px solid rgba(125, 211, 252, 0.35);
+  box-shadow: 0 12px 28px rgba(125, 211, 252, 0.12);
+}
+
+.name {
+  font-weight: 650;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+
+.tag {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.main {
+  padding: 8px 14px 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.hint {
+  color: var(--muted);
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+.error {
+  color: var(--danger);
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.status {
+  color: var(--muted);
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.pill {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.pill.disabled {
+  cursor: not-allowed;
+  color: var(--faint);
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.pro {
+  opacity: 0.92;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  transition: 160ms ease;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  top: 2px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  transition: 160ms ease;
+}
+
+input:checked + .slider {
+  background: rgba(125, 211, 252, 0.24);
+  border-color: rgba(125, 211, 252, 0.45);
+}
+
+input:checked + .slider:before {
+  transform: translateX(18px);
+  background-color: rgba(125, 211, 252, 0.95);
+}
