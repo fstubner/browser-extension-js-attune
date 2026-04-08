@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Attune</title>
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <div class="name">Attune</div>
+          <div class="tag">Auto volume leveling</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="card">
+        <div class="row">
+          <div>
+            <div class="label">This site</div>
+            <div id="siteHint" class="hint">—</div>
+          </div>
+          <label class="switch">
+            <input id="siteToggle" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div id="siteError" class="error" hidden></div>
+      </section>
+
+      <section class="card">
+        <div class="row">
+          <div>
+            <div class="label">Auto leveling</div>
+            <div class="hint">Keeps dialogue comfortable</div>
+          </div>
+          <label class="switch">
+            <input id="globalToggle" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div id="status" class="status" hidden></div>
+      </section>
+
+      <section class="card">
+        <div class="row">
+          <div>
+            <div class="label">Voice Boost</div>
+            <div class="hint">Enhance dialogue clarity</div>
+          </div>
+          <label class="switch">
+            <input id="vocalToggle" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </section>
+
+      <section class="card pro">
+        <div class="row">
+          <div>
+            <div class="label">Dialogue-first mode</div>
+            <div class="hint">Pro</div>
+          </div>
+          <button class="pill" id="upgradeBtn" type="button">Upgrade</button>
+        </div>
+        <div class="row">
+          <div>
+            <div class="label">Per-site tuning</div>
+            <div class="hint">Pro</div>
+          </div>
+          <span class="pill disabled">Locked</span>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./popup.js"></script>
+  </body>
+</html>
